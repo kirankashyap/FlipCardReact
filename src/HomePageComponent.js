@@ -13,16 +13,22 @@ render(){
   <h1> Flipcard </h1>
   Question: <input type="text" id="questionText"/>
   <button id="addButton" onClick={this.addQuestion}>Add</button>
-
-  <table id="cardsTable">
-
-
+    <table id="cardsTable">
   </table>
+
 
   </div>;
 }
-addQuestion(){
+$("#delbutton").onClick(){
+  alert("kiran")
 }
+addQuestion(){
+
+$("#cardsTable").append( '<tr><td><button id="questionButton">'+ $("#questionText").val() +
+ '</button></td><td><button id="delbutton">Delete</button></td></tr>')
+ 
+}
+
 
 }
 
