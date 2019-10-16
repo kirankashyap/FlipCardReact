@@ -3,7 +3,7 @@ import React from 'react';
 class Card extends React.Component{
 
   render(){
-    return <div>goo</div>
+    return <div>{this.props.title}</div>
     ;
   }
 
