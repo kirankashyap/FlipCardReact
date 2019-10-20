@@ -7,9 +7,7 @@ class Card extends React.Component{
     ;
   }
 
-  toString(){
-    return this.render();
-  }
+
 }
 
 export default Card;
