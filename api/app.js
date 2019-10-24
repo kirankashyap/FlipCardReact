@@ -20,6 +20,16 @@ app.get('/api/questions', (req, res) => {
     }
     res.status(200).json(results.rows)
   })
+});
+  
+//create new todo
+app.post('/api/questions', (req, res) => {
+	 pool.query('INSERT INTO QUESTIONS (title) values (\'XYZ\')', (error, results) => {
+    if (error) {
+      throw error
+    }
+    res.status(200).json(results.rows)
+  })
   
   
 });
