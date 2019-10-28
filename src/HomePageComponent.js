@@ -2,8 +2,6 @@
 import React from 'react';
 import $ from 'jquery';
 import Card from './Card';
-import ReactDOM from 'react-dom';
-var questionsList = ["ab"];
 class HomePageComponent extends React.Component{
 
 constructor(){
