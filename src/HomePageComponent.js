@@ -40,11 +40,6 @@ componentDidMount() {
         })
 }
 
-addQuestion(){
-
-
-}
-
 render(){
   return (<div>
   <h1> Flipcard </h1>
