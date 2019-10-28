@@ -19,4 +19,14 @@ describe('API Tests', () => {
                 done();
               })
   })
+
+  it('should fetch questions in ascending order of id', function (done) {
+      request(app)
+            .get('/api/questions')
+            .then(response => {
+                assert(response.body[0].id===1)
+                assert(response.body[1].id===2)
+                done();
+              })
+  })
 })

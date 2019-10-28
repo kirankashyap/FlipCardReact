@@ -5,7 +5,7 @@ const dbConnector = require("./DBConnector");
 
 // get all todos
 app.get('/api/questions', (req, res) => {
-	 dbConnector.query('SELECT * FROM questions', (error, results) => {
+	 dbConnector.query('SELECT * FROM questions order by id ASC', (error, results) => {
     if (error) {
       throw error;
     }
