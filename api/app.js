@@ -3,6 +3,8 @@ const app = express();
 const http = require("http");
 const dbConnector = require("./DBConnector");
 
+
+app.use(express.json());
 // get all todos
 app.get('/api/questions', (req, res) => {
 	 dbConnector.query('SELECT * FROM questions order by id ASC', (error, results) => {
@@ -15,7 +17,11 @@ app.get('/api/questions', (req, res) => {
 
 //create new todo
 app.post('/api/questions', (req, res) => {
-	 dbConnector.query('INSERT INTO QUESTIONS (title) values (\'XYZ\')', (error, results) => {
+	var questionText = req.body.title;
+	console.log(questionText);
+	var queryString = "INSERT INTO QUESTIONS (title) values ('"+questionText+"')";
+	console.log(queryString);
+	 dbConnector.query(queryString, (error, results) => {
     if (error) {
       throw error;
     }
