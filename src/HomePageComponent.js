@@ -42,20 +42,22 @@ componentDidMount() {
 render(){
   return (<div>
   <h1> Flipcard </h1>
-  <button onClick={
-    ()=>{
-                    fetch('http://localhost:5000/api/questions',
-                          {
-                          method: 'POST'
-                          })
-                      }
-                    }>dummy</button>
+
   Question: <input type="text" id="questionText"/>
 <button id="addButton" onClick={()=>{
     var textValue = $("#questionText").val();
     this.setState({cards:this.state.cards.concat({
       "title": textValue
     })})
+    fetch('http://localhost:5000/api/questions',
+          {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body:JSON.stringify({"title": textValue})
+
+          })
   }}>Add</button>
 
 
