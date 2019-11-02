@@ -61,4 +61,5 @@ typings/
 .next
 
 #test results junit
-api/test-results.xml
+test-results.xml
+ui/build/

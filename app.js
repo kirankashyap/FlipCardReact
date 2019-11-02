@@ -1,10 +1,15 @@
 var express = require("express");
 const app = express();
+const path = require('path');
+
 const http = require("http");
 const dbConnector = require("./DBConnector");
 
-
 app.use(express.json());
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'ui/build')));
+
 // get all todos
 app.get('/api/questions', (req, res) => {
 	 dbConnector.query('SELECT * FROM questions order by id ASC', (error, results) => {

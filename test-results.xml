@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.092" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-10-28T12:39:25" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="API Tests" timestamp="2019-10-28T12:39:25" tests="2" file="C:\Users\calib\source-codes\kiran\FlipCardReact\api\test\app.test.js" failures="0" time="0.092">
+    <testcase name="API Tests should be able to get status 200" time="0.086" classname="should be able to get status 200">
+    </testcase>
+    <testcase name="API Tests should get &gt;0 questions" time="0.006" classname="should get &gt;0 questions">
+    </testcase>
+  </testsuite>
+</testsuites>
