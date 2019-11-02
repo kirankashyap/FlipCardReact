@@ -5,6 +5,7 @@ const path = require('path');
 const http = require("http");
 const dbConnector = require("./DBConnector");
 
+dbConnector.connect();
 app.use(express.json());
 
 // Serve static files from the React app
