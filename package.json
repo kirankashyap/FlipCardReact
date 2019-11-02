@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --exit",
     "jenkinsTest": "mocha --reporter mocha-junit-reporter --exit",
-    "start": "node app.js"
+    "start": "node app.js",
+    "heroku-postbuild": "cd ui   && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
