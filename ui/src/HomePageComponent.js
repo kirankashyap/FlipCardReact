@@ -30,7 +30,7 @@ renderCards(){
 
 
 componentDidMount() {
-       fetch('http://localhost:5000/api/questions')
+       fetch('/api/questions')
        .then(res => res.json())
        .then((data) => {
          console.log(data);
@@ -49,7 +49,7 @@ render(){
     this.setState({cards:this.state.cards.concat({
       "title": textValue
     })})
-    fetch('http://localhost:5000/api/questions',
+    fetch('/api/questions',
           {
           method: 'POST',
           headers: {

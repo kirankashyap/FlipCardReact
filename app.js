@@ -35,8 +35,9 @@ app.post('/api/questions', (req, res) => {
 
 
 });
-const PORT = 5000;
+const PORT = process.env.port || 5000;
 const server = http.createServer(app);
 server.listen(PORT);
+console.log("Running server at port "+ PORT);
 
 module.exports = server;
