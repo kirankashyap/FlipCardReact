@@ -5,7 +5,7 @@
 CREATE TABLE questions
 (
   id serial NOT NULL,
-  value character varying(500) NOT NULL,
+  title character varying(500) NOT NULL,
   CONSTRAINT questions_pkey PRIMARY KEY (id)
 )
 WITH (

@@ -9,6 +9,6 @@ const client = new Client({
   //port: 5432
 
 })
-console.log("DB at "+ connectionStringValue);
+//console.log("DB at "+ connectionStringValue);
 
 module.exports = client;
