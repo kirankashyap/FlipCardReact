@@ -2,6 +2,8 @@
 import React from 'react';
 import $ from 'jquery';
 import Card from './Card';
+
+const Validator= require('./Validator');
 class HomePageComponent extends React.Component{
 
 constructor(){
@@ -46,9 +48,8 @@ render(){
   Question: <input type="text" id="questionText"/>
 <button id="addButton" onClick={()=>{
     var textValue = $("#questionText").val();
-    var isEmpty = (textValue === '');
-    console.log(isEmpty);
-    if(!isEmpty){
+    var textValidator = new Validator();
+    if(textValidator.validate(textValue)){
     this.setState({cards:this.state.cards.concat({
       "title": textValue
     })})

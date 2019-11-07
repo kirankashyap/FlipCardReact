@@ -18,9 +18,11 @@ afterEach(() => {
   container = null;
 });
 
-it("Card renders properly with correct title", () => {
-  act(() => {
-    render(<Card title="abc" />, container);
+describe("Card Tests", function(){
+  it("Card renders properly with correct title", () => {
+    act(() => {
+      render(<Card title="abc" />, container);
+    });
+    expect(container.textContent).toBe("abc");
   });
-  expect(container.textContent).toBe("abc");
-});
+})
