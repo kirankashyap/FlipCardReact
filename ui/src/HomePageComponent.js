@@ -46,6 +46,9 @@ render(){
   Question: <input type="text" id="questionText"/>
 <button id="addButton" onClick={()=>{
     var textValue = $("#questionText").val();
+    var isEmpty = (textValue === '');
+    console.log(isEmpty);
+    if(!isEmpty){
     this.setState({cards:this.state.cards.concat({
       "title": textValue
     })})
@@ -58,6 +61,7 @@ render(){
           body:JSON.stringify({"title": textValue})
 
           })
+      }
   }}>Add</button>
 
 
