@@ -3,7 +3,7 @@ import React from 'react';
 import $ from 'jquery';
 import Card from './Card';
 
-const Validator= require('./Validator');
+import Validator from './Validator';
 class HomePageComponent extends React.Component{
 
 constructor(){

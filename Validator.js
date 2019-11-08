@@ -1,6 +1,6 @@
 class Validator {
 
-  validate = function (text){
+  validate (text){
     if(text !== ''){
       return true;
     }
@@ -9,4 +9,4 @@ class Validator {
 
 }
 
-export default Validator;
+module.exports=Validator;
