@@ -1,4 +1,4 @@
-import Validator from "./Validator";
+const Validator = require("../Validator");
 const assert = require('assert');
 
 describe("Validator Tests", function(){
