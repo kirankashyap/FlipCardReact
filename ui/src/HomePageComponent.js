@@ -19,9 +19,9 @@ renderCards(){
   const items = []
 
   for (const [index, value] of elements.entries()) {
-    items.push(<div><table border="1">
+    items.push(<div id><table border="1">
     <tr>
-      <td><button><Card title={value.title} /></button></td>
+      <td><button id={"questionButton "+ index} name="questionButton"><Card title={value.title} /></button></td>
       <td><button>delete</button></td>
     </tr>
   </table></div>)
