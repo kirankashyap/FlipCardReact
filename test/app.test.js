@@ -3,9 +3,6 @@ let app = require('../app');
 const assert = require('assert');
 const dbConnector = require("../DBConnector");
 
-
-
-
 describe('API Tests', () => {
 
   before(function(done){
