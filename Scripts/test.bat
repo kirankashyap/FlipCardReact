@@ -1,3 +1,3 @@
 npm install
-set = true
+set CI= true
 npm run test
