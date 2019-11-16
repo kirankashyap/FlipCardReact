@@ -1,3 +1,3 @@
-npm install
+CALL npm install
 set CI= true
-npm run test
+CALL npm run test
