@@ -1,3 +1,2 @@
-CALL npm install
 set CI= true
-CALL npm run jenkinsTest
+CALL npm install && npm run unitTest && cd ui && npm install && npm run unitTest

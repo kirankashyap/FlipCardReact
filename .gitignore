@@ -62,4 +62,5 @@ typings/
 
 #test results junit
 test-results.xml
+ui/junit.xml
 ui/build/*

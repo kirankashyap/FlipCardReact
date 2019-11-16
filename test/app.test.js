@@ -29,14 +29,14 @@ describe('API Tests', () => {
   })
 
 
-  it('should be able to get status 200', function (done) {
+  it('should be able to get status 200 @integrationTest', function (done) {
       request(app)
             .get('/api/questions')
             .expect(200,done)
 
   })
 
-  it('should get 3 questions', function (done) {
+  it('should get 3 questions @integrationTest', function (done) {
       request(app)
             .get('/api/questions')
             .then(response => {
@@ -45,7 +45,7 @@ describe('API Tests', () => {
               })
   })
 
-  it('should fetch questions in ascending order of id', function (done) {
+  it('should fetch questions in ascending order of id @integrationTest', function (done) {
       request(app)
             .get('/api/questions')
             .then(response => {
@@ -54,7 +54,7 @@ describe('API Tests', () => {
               })
   })
 
-  it('should be able to get correct titles in questions', function (done) {
+  it('should be able to get correct titles in questions @integrationTest', function (done) {
       request(app)
             .get('/api/questions')
             .then(response => {

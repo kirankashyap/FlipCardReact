@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.03900000000000001" tests="6" failures="0">
-  <testsuite name="Root Suite" timestamp="2019-11-16T11:30:38" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="0.001" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-11-16T15:55:30" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="API Tests" timestamp="2019-11-16T11:30:38" tests="4" file="C:\Users\calib\source-codes\kiran\FlipCardReact\test\app.test.js" failures="0" time="0.03900000000000001">
-    <testcase name="API Tests should be able to get status 200" time="0.031" classname="should be able to get status 200">
+  <testsuite name="Validator Tests " timestamp="2019-11-16T15:55:30" tests="2" file="C:\Users\Kiran\source-code\FlipCardReact\test\Validator.test.js" failures="0" time="0.001">
+    <testcase name="Validator Tests  Returns false when empty @unitTest" time="0.001" classname="Returns false when empty @unitTest">
     </testcase>
-    <testcase name="API Tests should get 3 questions" time="0.004" classname="should get 3 questions">
-    </testcase>
-    <testcase name="API Tests should fetch questions in ascending order of id" time="0.002" classname="should fetch questions in ascending order of id">
-    </testcase>
-    <testcase name="API Tests should be able to get correct titles in questions" time="0.002" classname="should be able to get correct titles in questions">
-    </testcase>
-  </testsuite>
-  <testsuite name="Validator Tests" timestamp="2019-11-16T11:30:39" tests="2" file="C:\Users\calib\source-codes\kiran\FlipCardReact\test\Validator.test.js" failures="0" time="0">
-    <testcase name="Validator Tests Returns false when empty" time="0" classname="Returns false when empty">
-    </testcase>
-    <testcase name="Validator Tests Returns true when not empty" time="0" classname="Returns true when not empty">
+    <testcase name="Validator Tests  Returns true when not empty @unitTest" time="0" classname="Returns true when not empty @unitTest">
     </testcase>
   </testsuite>
 </testsuites>
