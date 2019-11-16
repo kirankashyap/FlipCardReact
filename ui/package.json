@@ -12,6 +12,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "unitTest": "react-scripts test --testResultsProcessor=jest-junit",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -28,5 +29,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest-junit": "^9.0.0",
+    "mocha": "^6.2.2",
+    "mocha-junit-reporter": "^1.23.1"
   }
 }

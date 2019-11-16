@@ -19,7 +19,7 @@ afterEach(() => {
 });
 
 describe("Card Tests", function(){
-  it("Card renders properly with correct title", () => {
+  it("Card renders properly with correct title @unitTest", () => {
     act(() => {
       render(<Card title="abc" />, container);
     });
