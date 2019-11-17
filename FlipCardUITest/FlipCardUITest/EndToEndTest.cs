@@ -24,7 +24,7 @@ namespace FlipCardUITest
             driver.Url = "http://localhost:5000/";
             System.Threading.Thread.Sleep(2000);
             IWebElement questionText = driver.FindElement(By.XPath("//*[@id=\"questionText\"]"));
-            questionText.SendKeys("koodhi");
+            questionText.SendKeys("test question");
             IWebElement addbutton = driver.FindElement(By.XPath("//*[@id=\"addButton\"]"));
             addbutton.Click();
             System.Threading.Thread.Sleep(2000);
@@ -34,7 +34,7 @@ namespace FlipCardUITest
             IWebElement addedQuestion = driver.FindElement(By.XPath("//*[@id=\"questionButton "+ count+"\"]"));
             var addques = addedQuestion.Text;
             
-            Assert.AreEqual("koodhi", addques);
+            Assert.AreEqual("test question", addques);
         }
 
         [TearDown]
