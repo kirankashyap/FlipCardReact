@@ -33,7 +33,9 @@ namespace FlipCardUITest
             count--;
             IWebElement addedQuestion = driver.FindElement(By.XPath("//*[@id=\"questionButton "+ count+"\"]"));
             var addques = addedQuestion.Text;
-            
+            Assert.IsTrue(addques.StartsWith("Click"));
+            addedQuestion.Click();
+            addques = addedQuestion.Text;
             Assert.AreEqual("test question", addques);
         }
 
