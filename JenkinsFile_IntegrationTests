@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    environment {
+       CI = true
+   }
+
+    stages {
+        stage ("Code pull"){
+            steps{
+                checkout scm
+                bat 'npm install'
+            }
+        }
+
+        stage('Backend Unit Tests') {
+              steps {
+                  bat 'npm run integrationTest'
+              }
+              post {
+                  always {
+                      // Archive unit tests for the future
+                      junit allowEmptyResults: true, testResults: 'test-results.xml'
+                  }
+              }
+          }
+
+    }
+}
