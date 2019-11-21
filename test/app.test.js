@@ -29,37 +29,23 @@ describe('API Tests', () => {
   })
 
 
-  it('should be able to get status 200 @integrationTest', function (done) {
-      request(app)
-            .get('/api/questions')
-            .expect(200,done)
-
-  })
-
   it('should get 3 questions @integrationTest', function (done) {
       request(app)
             .get('/api/questions')
             .then(response => {
                 assert(response.body.length==3)
-                done();
-              })
-  })
-
-  it('should fetch questions in ascending order of id @integrationTest', function (done) {
-      request(app)
-            .get('/api/questions')
-            .then(response => {
-                assert(response.body[0].id < response.body[1].id )
-                done();
-              })
-  })
-
-  it('should be able to get correct titles in questions @integrationTest', function (done) {
-      request(app)
-            .get('/api/questions')
-            .then(response => {
                 assert(response.body[0].title === 'q1')
                 assert(response.body[1].title === 'q2')
+                done();
+              })
+  })
+
+  it('should get questions in ascending order of id @integrationTest', function (done) {
+      request(app)
+            .get('/api/questions')
+            .then(response => {
+                assert(response.body[0].id < response.body[1].id);
+                assert(response.body[1].id < response.body[2].id);
                 done();
               })
   })

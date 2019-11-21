@@ -1,7 +1,7 @@
 class Validator {
 
   validate (text){
-    if(text !== ''){
+    if(text && text !== ''){
       return true;
     }
     return false;

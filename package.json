@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --exit",
+    "localIntegrationTest":"mocha --grep @integrationTest --exit",
+    "localUnitTest": "mocha --grep @unitTest --exit",
     "unitTest": "mocha --reporter mocha-junit-reporter --grep @unitTest --exit",
     "integrationTest": "mocha --reporter mocha-junit-reporter --grep @integrationTest --exit",
     "start": "node app.js",

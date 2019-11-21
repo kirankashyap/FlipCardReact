@@ -64,3 +64,5 @@ typings/
 test-results.xml
 ui/junit.xml
 ui/build/*
+FlipCardUITest/FlipCardUITest/obj
+FlipCardUITest/FlipCardUITest/bin

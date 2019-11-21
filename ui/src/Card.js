@@ -15,8 +15,7 @@ class Card extends React.Component{
       <td><button id={this.props.id} name="questionButton" onClick={()=>{
         this.setState({hiddenTitle: this.state.visibleTitle,visibleTitle: this.state.hiddenTitle});
       }}>{this.state.visibleTitle}</button></td>
-      <td><button>delete</button></td>
-    </tr>
+      </tr>
     ;
   }
 

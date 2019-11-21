@@ -32,9 +32,12 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16.1": "^1.6.2",
     "jest-junit": "^9.0.0",
     "mocha": "^6.2.2",
     "mocha-junit-reporter": "^1.23.1",
+    "react-test-renderer": "^16.12.0",
     "slash": "^3.0.0"
   }
 }

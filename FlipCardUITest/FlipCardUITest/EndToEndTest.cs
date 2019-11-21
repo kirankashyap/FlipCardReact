@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -30,7 +29,6 @@ namespace FlipCardUITest
             System.Threading.Thread.Sleep(2000);
             System.Collections.ObjectModel.ReadOnlyCollection<IWebElement> questionButtons = driver.FindElements(By.Name("questionButton"));
             int count = questionButtons.Count;
-            count--;
             IWebElement addedQuestion = driver.FindElement(By.XPath("//*[@id=\"questionButton "+ count+"\"]"));
             var addques = addedQuestion.Text;
             Assert.IsTrue(addques.StartsWith("Click"));

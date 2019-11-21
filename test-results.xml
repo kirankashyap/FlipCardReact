@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.406" tests="4" failures="0">
-  <testsuite name="Root Suite" timestamp="2019-11-17T05:09:54" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="0.001" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-11-21T02:08:50" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="API Tests" timestamp="2019-11-17T05:09:54" tests="4" file="C:\Users\Kiran\source-code\FlipCardReact\test\app.test.js" failures="0" time="0.406">
-    <testcase name="API Tests should be able to get status 200 @integrationTest" time="0.381" classname="should be able to get status 200 @integrationTest">
+  <testsuite name="Validator Tests " timestamp="2019-11-21T02:08:50" tests="2" file="C:\Users\calib\source-codes\kiran\FlipCardReact\test\Validator.test.js" failures="0" time="0.001">
+    <testcase name="Validator Tests  Returns false when empty @unitTest" time="0.001" classname="Returns false when empty @unitTest">
     </testcase>
-    <testcase name="API Tests should get 3 questions @integrationTest" time="0.012" classname="should get 3 questions @integrationTest">
-    </testcase>
-    <testcase name="API Tests should fetch questions in ascending order of id @integrationTest" time="0.007" classname="should fetch questions in ascending order of id @integrationTest">
-    </testcase>
-    <testcase name="API Tests should be able to get correct titles in questions @integrationTest" time="0.006" classname="should be able to get correct titles in questions @integrationTest">
+    <testcase name="Validator Tests  Returns true when not empty @unitTest" time="0" classname="Returns true when not empty @unitTest">
     </testcase>
   </testsuite>
 </testsuites>
