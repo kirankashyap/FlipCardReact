@@ -65,4 +65,11 @@ test-results.xml
 ui/junit.xml
 ui/build/*
 FlipCardUITest/FlipCardUITest/obj
+FlipCardUITest/packages
 FlipCardUITest/FlipCardUITest/bin
+beforePyramid/test-results.xml
+beforePyramid/ui/junit.xml
+beforePyramid/ui/build/*
+beforePyramid/FlipCardUITest/FlipCardUITest/obj
+beforePyramid/FlipCardUITest/FlipCardUITest/bin
+beforePyramid/FlipCardUITest/packages
