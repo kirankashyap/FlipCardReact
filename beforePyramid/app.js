@@ -1,12 +1,18 @@
 var express = require("express");
 const app = express();
 const path = require('path');
-const Validator= require('./Validator');
 const http = require("http");
 const dbConnector = require("./DBConnector");
 
 dbConnector.connect();
 app.use(express.json());
+
+function validate (text){
+	if(text !== ''){
+		return true;
+	}
+	return false;
+}
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'ui/build')));
@@ -24,11 +30,8 @@ app.get('/api/questions', (req, res) => {
 //create new todo
 app.post('/api/questions', (req, res) => {
 	var questionText = req.body.title;
-	console.log(questionText);
-	var textValidator = new Validator();
-	if(textValidator.validate(questionText)){
+	if(validate(questionText)){
 	var queryString = "INSERT INTO QUESTIONS (title) values ('"+questionText+"')";
-	console.log(queryString);
 	 dbConnector.query(queryString, (error, results) => {
     if (error) {
       throw error;

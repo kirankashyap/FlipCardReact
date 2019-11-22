@@ -3,7 +3,6 @@ import React from 'react';
 import $ from 'jquery';
 import Card from './Card';
 
-import Validator from './Validator';
 class HomePageComponent extends React.Component{
 
 constructor(){
@@ -11,6 +10,13 @@ constructor(){
   this.state = {
     cards: []
   }
+}
+
+validate (text){
+  if(text && text !== ''){
+    return true;
+  }
+  return false;
 }
 
 renderCards(){
@@ -47,8 +53,7 @@ render(){
   Question: <input type="text" id="questionText"/>
 <button id="addButton" onClick={()=>{
     var textValue = $("#questionText").val();
-    var textValidator = new Validator();
-    if(textValidator.validate(textValue)){
+    if(this.validate(textValue)){
     this.setState({cards:this.state.cards.concat({
       "title": textValue
     })})

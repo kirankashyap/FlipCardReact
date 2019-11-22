@@ -4,13 +4,7 @@
   "description": "API for questions card application",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --exit",
-    "localIntegrationTest":"mocha --grep @integrationTest --exit",
-    "localUnitTest": "mocha --grep @unitTest --exit",
-    "unitTest": "mocha --reporter mocha-junit-reporter --grep @unitTest --exit",
-    "integrationTest": "mocha --reporter mocha-junit-reporter --grep @integrationTest --exit",
-    "start": "node app.js",
-    "heroku-postbuild": "cd ui   && npm install && npm run build"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,11 +13,5 @@
     "babel-preset-es2015": "^6.24.1",
     "express": "^4.17.1",
     "pg": "^7.12.1"
-  },
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.2.2",
-    "mocha-junit-reporter": "^1.23.1",
-    "supertest": "^4.0.2"
   }
 }
