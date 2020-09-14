@@ -16,7 +16,7 @@ pipeline {
 
         stage('Backend Unit Tests') {
               steps {
-                  bat 'npm run unitTest'
+                  bat 'set CI=true && npm run unitTest'
               }
               post {
                   always {
@@ -28,7 +28,7 @@ pipeline {
 
           stage('UI Unit Tests') {
                 steps {
-                    bat 'cd ui && npm run unitTest'
+                    bat 'set CI=true && cd ui && npm run unitTest'
                 }
                 post {
                     always {

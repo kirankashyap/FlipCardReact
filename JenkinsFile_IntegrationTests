@@ -3,6 +3,7 @@ pipeline {
 
     environment {
        CI = true
+       DATABASE_URL='postgresql://postgres:tdd@localhost:5433/confdemo'
    }
 
     stages {
